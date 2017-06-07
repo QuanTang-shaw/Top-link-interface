@@ -1,0 +1,81 @@
+html , body , .container-fluid{
+	height:100%;
+	text-align: center;
+}
+.row1,.row2,.row3,.row4{
+	border: solid 1px;
+}
+.row1,.row2,.row4{
+	height:10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.row3{
+	height: 70%;
+}
+/*row1************************************ */
+.row1 .logo{height:80%;}
+.row1 img{
+	width:100%;
+	height:100%;
+}
+
+
+
+/*row2 ********************************************** */
+.row2 .pic{height:80%;}
+.row2 img{
+	width:100%;
+	height:100%;
+}
+
+
+
+
+/*row3**************************************/
+.left,.right{
+	display:block;
+	float:none;
+	height:50%;
+	background-color:#CDDEDB;
+
+}
+.left{
+	border-bottom:dotted 1px;
+}
+.Configuration{
+	display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+.Configuration form{
+	border: solid 1px;
+    width: 80%;
+    padding: 5px 5px;
+    border-radius:5px;
+}
+/*row4***********************************/
+
+
+
+
+
+
+@media (min-width:768px) {
+	.row1,.row2,.row4{
+		height:20%;
+	}
+	.row3{
+		height: 40%;
+	}
+	.left,.right{
+		height:100%;
+		float:left;
+		widows: 50%;
+	}
+	.left{
+		border:none;
+		border-right:dotted 1px;
+	}
+}
