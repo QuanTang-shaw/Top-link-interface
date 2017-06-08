@@ -9,6 +9,13 @@
     <link href="./app.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script>
+      $(function(){
+        // 默认显示
+        // $(".dropdown-toggle").dropdown('toggle');
+
+      });
+    </script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -22,7 +29,7 @@
         <div class="col-xs-5  col-sm-5 col-md-5 logo">
           <img src="./pic/TOP-STAR-LOGO.png" alt="这里是LOGO">
         </div>
-        <div class="col-xs-4  col-sm-4 col-md-4">
+        <div class="col-xs-4  col-sm-4 col-md-4 title">
           <h4>智能数据网关</h4>
         </div>
         <div class="col-xs-3  col-sm-3 col-md-3 menu">
@@ -42,136 +49,148 @@
           <button class="btn btn-default refresh">
             <span class="glyphicon glyphicon-refresh" aria-hidden="true">刷新</span>
           </button>
+          <button class="btn btn-default">
+            <span class="glyphicon glyphicon-upload" aria-hidden="true">更新配置</span>
+          </button>
         </div>
       </div>
       <div class="row row3">
         <div class="col-xs-12  col-sm-6 col-md-6 left">
-          <form class="form-horizontal">
-              <div class="form-group">
-                <label for="inputEmail3" class="col-xs-2 col-sm-2 col-md-2 control-label">接口:</label>
-                <div class="col-xs-8 col-sm-10 col-md-10">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-danger">Action</button>
-                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <span class="caret"></span>
-                      <span class="sr-only">Toggle Dropdown</span>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li role="separator" class="divider"></li>
-                      <li><a href="#">Separated link</a></li>
-                    </ul>
-                  </div>
-                </div>
+            <div class="select">
+              <div class="btn-group">
+                <button type="button" class="btn btn-danger" data-toggle="dropdown">接口</button>
+                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">串口RS232</a></li>
+                  <li><a href="#">RS485</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
               </div>
-              <div class="form-group">
-                <label for="inputPassword3" class="col-xs-2 col-sm-2 col-md-2 control-label">协议:</label>
-                <div class="col-xs-8 col-sm-10 col-md-10">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-danger">Action</button>
-                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <span class="caret"></span>
-                      <span class="sr-only">Toggle Dropdown</span>
-                    </button>
-                    <ul class="dropdown-menu">
-                      <li><a href="#">Action</a></li>
-                      <li><a href="#">Another action</a></li>
-                      <li><a href="#">Something else here</a></li>
-                      <li role="separator" class="divider"></li>
-                      <li><a href="#">Separated link</a></li>
-                    </ul>
-                  </div>
-                </div>
+              <div class="btn-group">
+                <button type="button" class="btn btn-danger">协议</button>
+                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">modbus</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
               </div>
-              <div class="form-group">
-                <label class="col-xs-2 col-sm-2 col-md-2 control-label">配置:</label>
-                <div class="col-xs-8 col-sm-9 col-md-9 Configuration">
+            </div>
+            <fieldset>
+                <legend>配置</legend>
+                <form class="form-horizontal Configuration">
                   <div class="form-group">
-                    <label for="" class="col-xs-4 col-sm-3 col-md-3">波特率:</label>
-                    <input type="text" class="col-xs-7 col-sm-8 col-md-8">
+                    <label for="" class="col-xs-4 col-sm-3 col-md-2">波特率:</label>
+                    <div class="col-xs-7 col-sm-8 col-md-8 ">
+                      <input type="text" class="form-control">
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label for="" class="col-xs-4 col-sm-3 col-md-3">数据位:</label>
-                    <input type="text" class="col-xs-7 col-sm-8 col-md-8">
+                    <label for="" class="col-xs-4 col-sm-3 col-md-2">数据位:</label>
+                    <div class="col-xs-7 col-sm-8 col-md-8">
+                      <input type="text" class="form-control">
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label for="" class="col-xs-4 col-sm-3 col-md-3">停止位:</label>
-                    <input type="text" class="col-xs-7 col-sm-8 col-md-8">
+                    <label for="" class="col-xs-4 col-sm-3 col-md-2">停止位:</label>
+                    <div class="col-xs-7 col-sm-8 col-md-8">
+                      <input type="text" class="form-control">
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label for="" class="col-xs-4 col-sm-3 col-md-3">指令1:</label>
-                    <input type="text" class="col-xs-7 col-sm-8 col-md-8">
+                    <label for="" class="col-xs-4 col-sm-3 col-md-2">指令1:</label>
+                    <div class="col-xs-7 col-sm-8 col-md-8">
+                      <input type="text" class="form-control">
+                    </div>
                   </div>
                   <div class="form-group">
-                    <label for="" class="col-xs-4 col-sm-3 col-md-3">指令2:</label>
-                    <input type="text" class="col-xs-7 col-sm-8 col-md-8">
+                    <label for="" class="col-xs-4 col-sm-3 col-md-2">指令2:</label>
+                    <div class="col-xs-7 col-sm-8 col-md-8">
+                      <input type="text" class="form-control">
+                    </div>
                   </div>
-                </div>
-              </div>
-
-          </form>
-          <!-- <div class="interface">
-            <label for="">接口:
-              <select name="" id="">
-                <option value="">RS232</option>
-                <option value="">RS485</option>
-                <option value="">USB</option>
-              </select>
-            </label>
-          </div> -->
-          <!-- <div class="protocol">
-            <label for="">协议:
-              <select name="" id="">
-                <option value="">modbus</option>
-                <option value="">protobuf</option>
-                <option value="">xml</option>
-              </select>
-            </label>
-          </div> -->
-          <!-- <div class="Configuration">
-              <span>配置:</span>
-              <form>
-                  <label for="">波特率:<input type="text"></label>
-                  <label for="">数据位:<input type="text"></label>
-                  <label for="">停止位:<input type="text"></label>
-                  <label for="">指令1:<input type="text"></label>
-                  <label for="">指令2:<input type="text"></label>
-              </form>
-          </div> -->
+                </form>
+            </fieldset>
         </div>
         <div class="col-xs-12  col-sm-6 col-md-6 right">
-          <div class="interface">
-            <label for="">接口:
-              <select name="" id="">
-                <option value="">GPRS</option>
-                <option value="">RS485</option>
-                <option value="">USB</option>
-              </select>
-            </label>
+        <div class="select">
+          <div class="btn-group">
+            <button type="button" class="btn btn-danger">接口</button>
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">串口RS232</a></li>
+              <li><a href="#">RS485</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
           </div>
-          <div class="protocol">
-            <label for="">协议:
-              <select name="" id="">
-                <option value="">Mqtt</option>
-                <option value="">protobuf</option>
-                <option value="">xml</option>
-              </select>
-            </label>
-          </div>
-          <div class="Configuration">
-              <span>配置:</span>
-              <form>
-                  <label for="">服务器:<input type="text"></label>
-                  <label for="">端口:<input type="text"></label>
-              </form>
+          <div class="btn-group">
+            <button type="button" class="btn btn-danger">协议</button>
+            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">modbus</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
           </div>
         </div>
+        <fieldset>
+            <legend>配置</legend>
+            <form class="form-horizontal Configuration">
+              <div class="form-group">
+                <label for="" class="col-xs-4 col-sm-3 col-md-2">波特率:</label>
+                <div class="col-xs-7 col-sm-8 col-md-8 ">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-xs-4 col-sm-3 col-md-2">数据位:</label>
+                <div class="col-xs-7 col-sm-8 col-md-8">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-xs-4 col-sm-3 col-md-2">停止位:</label>
+                <div class="col-xs-7 col-sm-8 col-md-8">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-xs-4 col-sm-3 col-md-2">指令1:</label>
+                <div class="col-xs-7 col-sm-8 col-md-8">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-xs-4 col-sm-3 col-md-2">指令2:</label>
+                <div class="col-xs-7 col-sm-8 col-md-8">
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+            </form>
+        </fieldset>
+        </div>
       </div>
-      <div class="row row4">
-        <button class="btn btn-default">更新配置</button>
-      </div>
+      <!-- <div class="row row4"></div> -->
     </div>
     <!-- <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script> -->
     <!-- <script src="./js/bootstrap.min.js"></script> -->
