@@ -13,7 +13,8 @@ html , body , .container-fluid{
 	align-items: center;
 }
 .row3{
-	height: 70%;
+	/*height: 70%;*/
+	height: inherit;
 }
 /*row1************************************ */
 .row1 .logo{height:100%;}
@@ -39,7 +40,8 @@ html , body , .container-fluid{
 .left,.right{
 	display:block;
 	float:none;
-	height:50%;
+	/*height: inherit;*/
+	/*height:50%;*/
 	/*background-color:#CDDEDB;*/
 
 }
