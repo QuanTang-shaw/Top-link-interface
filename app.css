@@ -47,9 +47,8 @@ html , body , .container-fluid{
 	border-bottom:dotted 1px;
 }
 .Configuration{
-	display: flex;
-    flex-direction: row;
-    align-items: baseline;
+	border:dotted 1px #DCD1D1;
+	border-radius:5px;
 }
 .Configuration form{
 	border: solid 1px;
