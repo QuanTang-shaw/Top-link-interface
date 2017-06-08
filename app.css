@@ -1,11 +1,12 @@
 html , body , .container-fluid{
 	height:100%;
-	text-align: center;
+	/*text-align: center;*/
 }
 .row1,.row2,.row3,.row4{
 	border: solid 1px;
 }
-.row1,.row2,.row4{
+.row1{height:10%;}
+.row2,.row4{
 	height:10%;
 	display: flex;
 	justify-content: center;
@@ -15,21 +16,22 @@ html , body , .container-fluid{
 	height: 70%;
 }
 /*row1************************************ */
-.row1 .logo{height:80%;}
+.row1 .logo{height:100%;}
 .row1 img{
 	width:100%;
 	height:100%;
 }
+.menu{}
+.setup{
 
+}
 
 
 /*row2 ********************************************** */
-.row2 .pic{height:80%;}
 .row2 img{
-	width:100%;
-	height:100%;
+    width: 16vw;
+    height: 16vw;
 }
-
 
 
 
@@ -38,7 +40,7 @@ html , body , .container-fluid{
 	display:block;
 	float:none;
 	height:50%;
-	background-color:#CDDEDB;
+	/*background-color:#CDDEDB;*/
 
 }
 .left{
@@ -63,19 +65,24 @@ html , body , .container-fluid{
 
 
 @media (min-width:768px) {
-	.row1,.row2,.row4{
-		height:20%;
-	}
-	.row3{
-		height: 40%;
-	}
+	.container-fluid{max-width:992px;}
+	.row1{height:15%;}
+	.row2{height:20%;}
+	.row3{height:initial;}
+	.row4{height:10%;}
 	.left,.right{
 		height:100%;
 		float:left;
-		widows: 50%;
+		/*width: 50%;*/
 	}
 	.left{
 		border:none;
 		border-right:dotted 1px;
 	}
+	.row2 img{width: 180px;height: 180px;}
+	.refresh{
+		padding: 25px 20px;
+	    font-size: 40px;
+	}
+
 }
